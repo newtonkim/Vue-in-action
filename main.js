@@ -1,9 +1,12 @@
-const app = Vue.createApp({
+    const app = Vue.createApp({
 
-    data() {
-        return {
-            'Product': 'Socks',
-            'Description' : '100% Cotton'
+        data() {
+            return {
+                Product: 'Socks',
+                image: './assets/images/socks_green.jpg',
+                // inStock: true
+                inventory: 10,
+                onSale: true
+            }
         }
-    }
-}).mount('#app')
+    }).mount('#app')
