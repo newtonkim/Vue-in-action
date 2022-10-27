@@ -66,17 +66,22 @@ data() {
 }, 
 methods: {
   addToCart() {
-      this.cart += 1;
-  },
+      // this.cart += 1;
+    this.$emit('add-to-cart', this.variants[this.selecedVariant].id)
 
-  updateVariant(index) {
-      this.selecedVariant = index
   },
 
   removeFromCart() {
-      this.cart -= 1;
+      // this.cart -= 1;
+    this.$emit('remove-item', this.variants[this.selectedVariant].id)
+  },
+
+  updateVariant(index) {
+    this.selectedVariant = index;
   }
+
 },
+
 computed: {
   title() {
       return this.brand + ' ' + this.product;
