@@ -2,8 +2,13 @@ const app = Vue.createApp({
 
     data() {
         return {
-            'Product': 'Socks',
-            'Description' : '100% Cotton'
+            cart: 0,
+            premium: true,
+           
         }
+    }, 
+    methods: {
+    
     }
-}).mount('#app')
+   
+})

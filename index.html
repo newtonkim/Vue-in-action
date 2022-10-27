@@ -10,11 +10,24 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{ Product}}</h1>
-      <p>{{Description}}</p>
-    </div>
+      <div class="nav-bar"></div>
 
-    <!-- Import Js -->
+      <div class="cart">Cart({{ cart }})</div>
+      <product-display :premium="premium"></product-display>
+     
+      </div>
+
+    <!-- Import App -->
     <script src="./main.js"></script>
+
+    <!-- Import Component -->
+    <script src="./components/ProductDisplay.js"></script>
+
+
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+
   </body>
 </html>
